@@ -1,0 +1,56 @@
+/* Navbar estilo contrastante */
+.navbar{
+    background-color: #007bff; /* Color primary de Bootstrap */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra sutil */
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-nav .nav-link {
+    color: #fff; /* Texto blanco */
+}
+
+.nav-item{
+    font-size: larger;
+}
+.nav-item a{
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+
+/* Footer estilo contrastante */
+.footer {
+    background-color: #343a40; /* Color dark de Bootstrap */
+    color: #fff; /* Texto blanco */
+    padding: 40px 0;
+}
+
+.footer-custom a {
+    color: #fff; /* Enlaces en texto blanco */
+}
+
+.login-out-text{
+    color: whitesmoke;
+    font-weight: bold;
+    display: flex; 
+    align-items: center;
+}
+
+.navbar-btn:hover{
+    background-color: aquamarine;
+    border-radius: 5px;
+}
+
+.navbar-btn a:hover{
+    color: black;
+    
+}
+
+.navbar-brand{
+    padding: 1%;
+}
+
+.navbar-brand:hover i{
+    color: black;
+}
+
