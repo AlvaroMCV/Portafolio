@@ -1,2 +1,2 @@
 # Portafolio
-Portafolio hehco como trabajo final de BootCamp full Stack Python
+Portafolio hecho como trabajo final de BootCamp full Stack Python
