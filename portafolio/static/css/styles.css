@@ -1,56 +1,86 @@
 /* Navbar estilo contrastante */
-.navbar{
-    background-color: #007bff; /* Color primary de Bootstrap */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra sutil */
+.navbar {
+
+    background: linear-gradient(to right, #007bff, #7db7fa, #007bff);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil */
 }
 
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-nav .nav-link {
-    color: #fff; /* Texto blanco */
+    color: #fff;
+    /* Texto blanco */
 }
 
-.nav-item{
+.nav-item {
     font-size: larger;
 }
-.nav-item a{
+
+.nav-item a {
     color: whitesmoke;
     font-weight: bold;
+}
+
+.navbar-nav .nav-link,
+.navbar-text {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
 }
 
 
 /* Footer estilo contrastante */
 .footer {
-    background-color: #343a40; /* Color dark de Bootstrap */
-    color: #fff; /* Texto blanco */
+    background-color: #343a40;
+    /* Color dark de Bootstrap */
+    color: #fff;
+    /* Texto blanco */
     padding: 40px 0;
 }
 
 .footer-custom a {
-    color: #fff; /* Enlaces en texto blanco */
+    color: #fff;
+    /* Enlaces en texto blanco */
 }
 
-.login-out-text{
+.login-out-text {
     color: whitesmoke;
+    font-size: large;
     font-weight: bold;
-    display: flex; 
+    display: flex;
     align-items: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
 }
 
-.navbar-btn:hover{
+.navbar-btn:hover {
     background-color: aquamarine;
     border-radius: 5px;
 }
 
-.navbar-btn a:hover{
+.navbar-btn a:hover {
     color: black;
-    
+
 }
 
-.navbar-brand{
+.navbar-brand {
     padding: 1%;
 }
 
-.navbar-brand:hover i{
+.navbar-brand:hover i {
     color: black;
 }
 
+.navbar-btn:hover span, .navbar-btn:hover i{
+    color: black;
+}
+
+.navbar i {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+}
+
+.user-name-text{
+    font-size: larger;
+    color:orange;
+}
+
+footer p {
+    margin-bottom: 0.2%; /* Ajusta este valor según sea necesario */
+}
