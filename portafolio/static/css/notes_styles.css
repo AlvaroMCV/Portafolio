@@ -1,0 +1,5 @@
+.form-check-input {
+    border: 2px solid #007bff; /* Cambia el color y el grosor del borde */
+    width: 20px; /* Aumenta el tamaño del checkbox */
+    height: 20px;
+}

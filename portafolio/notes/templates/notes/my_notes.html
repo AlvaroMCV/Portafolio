@@ -2,15 +2,15 @@
 
 {% block main_content %}
 <div class="main-container mt-3">
-    <div class="row">
-        <div class="col-12 mb-3">
-            <a href="{% url 'newnote' %}" class="btn btn-primary">Crear Nueva Nota</a>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 mb-3">
+                <a href="{% url 'newnote' %}" class="btn btn-primary">Crear Nueva Nota</a>
+            </div>
         </div>
-    </div>
-
-    {% if notes %}
+        {% if notes %}
         {% for nota in notes %}
-        <div class="row col-md-8">
+        <div class="row">
             <div class="col-md-12">
                 <div class="card mb-4">
                     <div class="card-header bg-primary text-white">
@@ -29,12 +29,14 @@
             </div>
         </div>
         {% endfor %}
-    {% else %}
-        <div class="col-12">
-            <p>No tienes notas creadas.</p>
-            <p>Crea nuevas notas para verlas en esta página.</p>
+        {% else %}
+        <div class="row">
+            <div class="col-md-12">
+                <p>No tienes notas creadas.</p>
+                <p>Crea nuevas notas para verlas en esta página.</p>
+            </div>
         </div>
-    {% endif %}
-
+        {% endif %}
+    </div>
 </div>
 {% endblock %}
