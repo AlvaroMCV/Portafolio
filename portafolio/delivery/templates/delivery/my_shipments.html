@@ -1,0 +1,23 @@
+{% extends 'common/base.html' %}
+
+{% block main_content %}
+<h1>Mis Envíos</h1>
+<div class="main-container">
+        {% for shipment in shipments %}
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Envío: {{ shipment.numero_seguimiento }}</h5>
+                        <p class="card-text"><strong>Destinatario:</strong> {{ shipment.destinatario }}</p>
+                        <p class="card-text"><strong>Dirección Destino:</strong> {{ shipment.direccion_destino }}</p>
+                        <p class="card-text"><strong>Valor Declarado:</strong> {{ shipment.valor_declarado }}</p>
+                        <p class="card-text"><strong>Estado:</strong> {{ shipment.estado }}</p>
+                        <p class="card-text"><strong>Fecha de Envío:</strong> {{ shipment.fecha_envio }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>    
+        {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+<!-- new_shipment.html -->
+
+{% extends 'common/base.html' %}
+
+{% block main_content %}
+<div class="container main-container mt-3">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="card-title mb-0">Nuevo Envío</h2>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+
+                        <div class="text-center mt-3">
+                            <button type="submit" class="btn btn-primary">Crear Envío</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

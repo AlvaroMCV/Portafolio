@@ -1,7 +1,82 @@
 {% extends 'common/base.html' %}
 
 {% block main_content %}
-<div class="container main-container">
-    
+<div class="container main-container px-5">
+    <!-- Hero Section -->
+    <div class="text-center mb-5 content-card" style="background: rgba(0, 0, 0, 0.5); border-radius: 15px; margin-top: 10%; padding: 1%;">
+        <h1 class="display-4">Bienvenido a Empresa de Encomiendas</h1>
+        <p class="lead">Rápido, seguro y confiable. Envíos nacionales e internacionales.</p>
+        <a href="#servicios" class="btn btn-light btn-lg">Ver Servicios</a>
+    </div>
+
+    <!-- Servicios Section -->
+    <div id="servicios" class="py-5 text-light">
+        <h2 class="text-center mb-4">Nuestros Servicios</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 content-card" style="background: rgba(0, 0, 0, 0.5); border-radius: 15px;">
+                    <div class="card-body">
+                        <h5 class="card-title text-light">Envíos Nacionales</h5>
+                        <p class="card-text text-light">Realizamos envíos rápidos y seguros a cualquier parte del país.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 content-card" style="background: rgba(0, 0, 0, 0.5); border-radius: 15px;">
+                    <div class="card-body">
+                        <h5 class="card-title text-light">Envíos Internacionales</h5>
+                        <p class="card-text text-light">Llevamos tus paquetes a cualquier parte del mundo con total seguridad.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 content-card" style="background: rgba(0, 0, 0, 0.5); border-radius: 15px;">
+                    <div class="card-body">
+                        <h5 class="card-title text-light">Seguimiento de Paquetes</h5>
+                        <p class="card-text text-light">Sigue el estado de tu envío en tiempo real con nuestro sistema de seguimiento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonios Section -->
+    <div id="testimonios" class="py-5" style="color: #fff;">
+        <h2 class="text-center mb-4">Testimonios de Nuestros Clientes</h2>
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="card content-card-bg">
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p class="text-light">Excelente servicio, mi paquete llegó a tiempo y en perfectas condiciones.</p>
+                                <footer class="blockquote-footer text-light">Juan Pérez</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card content-card-bg">
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p class="text-light">La mejor empresa de encomiendas que he utilizado, altamente recomendada.</p>
+                                <footer class="blockquote-footer text-light">María García</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card content-card-bg">
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p class="text-light">Excelente atención al cliente y servicio de seguimiento.</p>
+                                <footer class="blockquote-footer text-light">Carlos López</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}
