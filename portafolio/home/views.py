@@ -6,3 +6,6 @@ def home(request):
 
 def on_build(request):
     return render(request, 'common/on_build.html')
+
+def about_me(request):
+    return render(request, 'home/about_me.html')

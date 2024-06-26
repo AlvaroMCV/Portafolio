@@ -1,0 +1,44 @@
+{% extends 'common/base.html' %}
+
+{% load static %}
+{% block main_content %}
+<div class="about-me-main-container">
+    <div class="row text-center" style="width: 80%;">
+        <div class="col-md-12">
+            <div class="card about-me-card">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="card-title mb-0">Sobre Mí</h2>
+                </div>
+                <div class="card-body container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <!-- Aquí va la imagen desde el directorio estático -->
+                            <img src="{% static 'img/yo.jpg' %}" class="img-fluid rounded-circle mb-3"
+                                alt="Mi Foto de Perfil">
+                        </div>
+
+                        <div class="col-md-8">
+                            <p>Mi nombre es Alvaro Matías Castillo Villalobos. Soy Técnico en Electricidad Industrial y actual Estudiante de Ingeniería en Electricidad 
+                                y Electrónica. Me apasiona la automatización y tambien la programación</p>
+
+                            <p>He creado esta página para prácticar las habilidades adquiridas en la realización de un BootCamp de programación FullStack Python</p>
+
+                            <p>Si tienes alguna pregunta o quieres saber más sobre mi trabajo, no dudes en <a href="{% url 'onbuild' %}">contactarme.</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="col">
+                            <a href="#" class="btn btn-outline-primary btn-block">LinkedIn</a>
+                        </div>
+                        <div class="col">
+                            <a href="#" class="btn btn-outline-primary btn-block">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
