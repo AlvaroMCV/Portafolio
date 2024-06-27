@@ -28,12 +28,13 @@
 
 
 /* Footer estilo contrastante */
-.footer {
+footer {
     background-color: #343a40;
     /* Color dark de Bootstrap */
     color: #fff;
     /* Texto blanco */
     padding: 40px 0;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2); /* Sombra en la parte superior */
 }
 
 .footer-custom a {

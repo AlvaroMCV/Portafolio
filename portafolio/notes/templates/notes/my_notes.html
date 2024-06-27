@@ -1,18 +1,13 @@
 {% extends 'common/base.html' %}
 
 {% block main_content %}
-<div class="main-container mt-3">
+<div class="notes-main-container mt-3">
     <div class="container">
-        <div class="row">
-            <div class="col-md-12 mb-3">
-                <a href="{% url 'newnote' %}" class="btn btn-primary">Crear Nueva Nota</a>
-            </div>
-        </div>
         {% if notes %}
         {% for nota in notes %}
         <div class="row">
             <div class="col-md-12">
-                <div class="card mb-4">
+                <div class="card note-card mb-4">
                     <div class="card-header bg-primary text-white">
                         <h5 class="card-title">{{ nota.titulo }}{% if nota.importante %} (IMPORTANTE){% endif %}</h5>
                     </div>
@@ -38,5 +33,6 @@
         </div>
         {% endif %}
     </div>
+    <a href="{% url 'newnote' %}" class="btn btn-primary floating-btn"><i class="fas fa-plus"></i> Nueva Nota</a>
 </div>
 {% endblock %}
