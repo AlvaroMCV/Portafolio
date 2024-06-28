@@ -1,0 +1,49 @@
+{% extends 'common/base.html' %}
+
+{% block main_content %}
+<div class="container main-container mt-3">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="card form-card">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="card-title mb-0">Editar post</h2>
+                </div>
+                <div class="card-body text-start">
+                    <!-- Mostrar mensajes de éxito o error
+                    {% if messages %}
+                        <ul class="messages">
+                            {% for message in messages %}
+                                <li class="{% if message.tags %}{{ message.tags }}{% endif %}">{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                    -->
+                    <!-- Formulario de edición de post -->
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="form-group mb-3">
+                            <h5>{{ form.titulo.label_tag }}</h5>
+                            {{ form.titulo }}
+                            {% if form.titulo.errors %}
+                                <div class="error text-danger">{{ form.titulo.errors }}</div>
+                            {% endif %}
+                        </div>
+                        <div class="form-group mb-3">
+                            <h5>{{ form.contenido.label_tag }}</h5>
+                            {{ form.contenido }}
+                            {% if form.contenido.errors %}
+                                <div class="error text-danger">{{ form.contenido.errors }}</div>
+                            {% endif %}
+                        </div>
+                        <div class="container text-center">
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+

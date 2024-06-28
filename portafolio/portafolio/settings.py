@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'authentication',
     'home',
     'notes',
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -113,6 +114,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 LOGIN_REDIRECT_URL = 'home'
+LOGIN_URL = '/authentication/signin'
 
 
 # Internationalization
