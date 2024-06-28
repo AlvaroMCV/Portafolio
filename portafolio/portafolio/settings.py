@@ -28,6 +28,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+LOGIN_URL = 'signin'
+
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -43,6 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'authentication',
     'home',
+    'notes',
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -81,8 +85,12 @@ WSGI_APPLICATION = 'portafolio.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'portafolio2',       # Replace with your PostgreSQL database name
+        'USER': 'postgres',       # Replace with your PostgreSQL database user
+        'PASSWORD': 'Alvaro29111996a', # Replace with your PostgreSQL database password
+        'HOST': 'localhost',       # Replace with your PostgreSQL database host, e.g., 'localhost'
+        'PORT': '5432',       # Replace with your PostgreSQL database port, usually '5432'
     }
 }
 
@@ -106,6 +114,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 LOGIN_REDIRECT_URL = 'home'
+LOGIN_URL = '/authentication/signin'
 
 
 # Internationalization

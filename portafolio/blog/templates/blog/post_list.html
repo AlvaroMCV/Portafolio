@@ -1,0 +1,72 @@
+{% extends 'common/base.html' %}
+
+{% block main_content %}
+<div class="container blog-container">
+  <div class="container d-flex flex-row justify-content-center">
+    <h1 class="blog-title">Posts</h1>
+  </div>
+  <div class="container d-flex flex-column center px-5">
+    <!--
+    {% if messages %}
+    <ul class="messages" style="list-style-type: none;">
+      {% for message in messages %}
+      {% if message.tags != 'success' or not request.user.is_authenticated %}
+      <li>{% if message.tags %} class="{{ message.tags }}"{% endif %} style="color: red;">
+        {{ message }}
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+    {% endif %}
+    -->
+    {% if posts %}
+    {% for post in posts %}
+    <div class="card post-card">
+      <div class="card-header" style="display: flex; flex-direction: row; justify-content: space-between;">
+        <div class="container">
+          <h3>{{ post.titulo }}</h3>
+        </div>
+        <div class="container" style="display: flex; flex-direction: row; justify-content: flex-end;">
+          <a class="btn btn-primary blog-btn" href="{% url 'post_detail' post.id %}"
+            style="height: fit-content; width: fit-content;">Ver Detalles</a>
+          {% if request.user.is_authenticated and request.user == post.autor %}
+          <a class="btn btn-secondary blog-btn" href="{% url 'post_edit' post.id %}"
+            style="height: fit-content; width: fit-content; margin-left: 1%;">Editar</a>
+          {% endif %}
+          {% if request.user.is_authenticated %}
+          <a class="btn btn-danger blog-btn" href="{% url 'post_delete' post.id %}"
+            style="height: fit-content; width: fit-content; margin-left: 1%;">Eliminar</a>
+          {% endif %}
+        </div>
+      </div>
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <p>{{ post.contenido|truncatechars:150 }}</p>
+        </blockquote>
+      </div>
+      <div class="card-footer">
+        <p>{{post.autor}}</p>
+      </div>
+    </div>
+    <br>
+    {% endfor %}
+    {% else %}
+    <div class="card post-card">
+      <div class="card-body text-center">
+        <h3 class="post-title">No hay posts creados actualmente</h3>
+        <p>Por favor, crea un <a href="{% url 'new_post' %}">nuevo post</a> para comenzar.</p>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+
+  <a class="btn btn-primary btn-floating blog-btn d-flex" href="{% url 'new_post' %}">
+    <div class="container d-flex flex-column">
+      <i class="fa fa-plus fa-2x"></i>
+      <h5>Nuevo Post</h5>
+    </div>
+    
+  </a>
+</div>
+
+{% endblock %}
