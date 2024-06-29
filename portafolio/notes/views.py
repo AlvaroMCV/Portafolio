@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import get_object_or_404, render, redirect
 from .models import Nota
 from .forms import NotaForm
 from django.contrib.auth.decorators import login_required
@@ -23,5 +23,12 @@ def new_note(request):
         form = NotaForm()
     return render(request, 'notes/new_note.html', {'form': form})
 
-def on_contruction(request):
-    return render(request, 'common/on_construction.html')
+@login_required
+def delete_note(request, id):
+    nota = get_object_or_404(Nota, id=id)
+
+    if nota is not None:
+        nota.delete()
+    
+    notes = Nota.objects.filter(autor=request.user)
+    return render(request, 'notes/my_notes.html', {'notes': notes})
